@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testnet-deployment
+spec:
+  selector: 
+    matchLabels:
+      app: bitcoin-testnet
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: bitcoin-testnet
+    spec:
+      containers:
+      - name: btc-testnet
+        image: bitcoin-testnet
+        ports:
+        - containerPort: 80
+      
+
