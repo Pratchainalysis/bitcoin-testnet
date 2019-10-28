@@ -35,5 +35,5 @@ USER tester
 WORKDIR /home/tester/bitcoin-testnet-box
 
 # expose two rpc ports for the nodes to allow outside container access
-EXPOSE 19001 19011 19021
+EXPOSE 19001 19011 19021 19031
 CMD ["/bin/bash"]
